@@ -6,6 +6,7 @@
   --color-success: #41f1b6;
   --color-warning: #ffbb55;
   --color-white: #fff;
+  --color-black: #000;
   --color-info-dark: #7d8da1;
   --color-info-light: #dce1eb;
   --color-dark: #363949;
@@ -23,4 +24,68 @@
   --padding-1: 1.2rem;
 
   --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+* {
+  font-family: Poppins, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: var(--box-shadow);
+  align-items: center;
+  height: 5.5rem;
+  background: var(--color-white);
+}
+
+header .logo {
+  display: flex;
+  color: var(--color-black);
+  align-items: center;
+}
+
+header .logo img {
+  height: 65px;
+}
+
+header .logo h1 {
+  margin-left: 1rem;
+  font-size: 2rem;
+}
+
+header .navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+header .navbar a {
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--color-black);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.home {
+  min-height: 100vh;
+  background: var(--color-background);
+}
+
+.aboutme {
+  min-height: 100vh;
+  background: var(--color-background);
+}
+
+.projects {
+  min-height: 100vh;
+  background: var(--color-background);
+}
+
+.contact {
+  min-height: 100vh;
+  background: var(--color-background);
 }
