@@ -10,8 +10,8 @@
 
     <header class="navigation">
         <div class="logo">
-            <img src="./images/logoDark.png" alt="Jessedp's Logo">
-            <h1>Jessedp</h1>
+            <img src="./images/logoDark.png" id="headerLogo" alt="Jessedp's Logo">
+            <a href="#home">Jessedp</a>
         </div>
         <div class="navbar">
             <ul>
@@ -19,25 +19,96 @@
                 <li><a href="#aboutme">Over Mij</a></li>
                 <li><a href="#projects">Projecten</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><button id="toggleBtn">🌙 Dark Mode</button></li>
             </ul>
         </div>
     </header>
 
     <section class="home" id="home">
-
+        <div class="content">
+            <h1>Hi, Ik ben Jesse de Poot</h1>
+            <h2>Ik ben een <span class="auto-type"></span></h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora vero dolores veniam! Rem obcaecati veniam hic, quia dolores in harum nemo ipsum eius, tempore totam illum voluptate suscipit aperiam quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, illum sequi obcaecati exercitationem unde culpa ad minus sunt eaque quo veniam sint rem aut perferendis porro, fuga fugiat dolorum vero.</p>
+            <br>
+            <div class="btn-box">
+                <a class="button" href="#projects">Projecten</a>
+                <a class="button" href="#contact">Laten we praten</a>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="./images/logoPrimary.png" alt="Jessedp's Logo">
+        </div>
     </section>
 
     <section class="aboutme" id="aboutme">
-
+        <h1>Over Mij</h1>
+        <div class="content">
+            <p>Ik ben Jesse de Poot, 18 jaar en momenteel bezig met mijn Associate Degree Informatica aan de Avans Hogeschool. Wat mij drijft is mensen helpen en iets nieuws creëren – of dat nu in een project, een website of een innovatieve oplossing is. Ik ben van nature rustig, maar kan ook energiek en enthousiast worden als ik echt gepassioneerd ben over een onderwerp. Daarbij ben ik altijd leergierig en nieuwsgierig naar hoe dingen werken.<br>
+<br>Een van mijn projecten waar ik trots op ben, is een website die een AAAD Lander aanstuurt. Dit project combineerde mijn interesse in technologie met mijn wens om praktische oplossingen te bouwen en mensen te helpen. Ik vind het leuk om complexe uitdagingen stap voor stap aan te pakken en ideeën om te zetten in concrete resultaten.</p>
+            <img src="./images/logop.png" alt="Test">
+        </div>
     </section>
 
     <section class="projects" id="projects">
-
+        <h1 class="title">Projecten</h1>
+        <div class="content">
+            <div class="project">
+                <img src="./images/Schermafbeelding 2025-10-05 190940.png" alt="">
+                <h1>w2defew</h1>
+                <h2>Lorem</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure consequatur recusandae asperiores accusamus, ducimus, nihil aspernatur magni adipisci debitis minus eligendi magnam deleniti sequi et modi earum minima atque fugit.</p>
+                <div class="buttons">
+                    <a href="#" class="button">Hi</a>
+                    <a href="#" class="button">Hi</a>
+                </div>
+            </div>
+            <div class="project">2</div>
+            <div class="project">3</div>
+        </div>
     </section>
 
     <section class="contact" id="contact">
-
+        <h1>Contact</h1>
     </section>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<script>
+    var typed = new Typed('.auto-type', {
+      strings: ['Gamer','Student', 'Frontend Developer'],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true,
+    });
+  </script>
+
+ <script>
+    const btn = document.getElementById("toggleBtn");
+    const body = document.body;
+    const logo = document.getElementById("headerLogo");
+
+    // Check localStorage bij laden
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      body.classList.add("dark-theme");
+      logo.src = "./images/logoLight.png";
+      btn.textContent = "☀️ Light Mode";
+    }
+
+    btn.addEventListener("click", () => {
+      body.classList.toggle("dark-theme");
+
+      if (body.classList.contains("dark-theme")) {
+        btn.textContent = "☀️ Light Mode";
+        logo.src = "./images/logoLight.png";
+        localStorage.setItem("theme", "dark"); // onthoud
+      } else {
+        btn.textContent = "🌙 Dark Mode";
+        logo.src = "./images/logoDark.png";
+        localStorage.setItem("theme", "light"); // onthoud
+      }
+    });
+  </script>
 
 </body>
 </html>
