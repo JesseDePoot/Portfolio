@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesse de Poot's Portfolio</title>
+    <link rel="stylesheet" href="./style.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header class="navigation">
+        <div class="logo">
+            <img src="./images/logoDark.png" id="headerLogo" alt="Jessedp's Logo">
+            <a href="#home">Jessedp</a>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#aboutme">Over Mij</a></li>
+                <li><a href="#projects">Projecten</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="toggleBtn">
+                    <i class="fa-solid fa-moon"></i>
+                </button></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="content">
+            <h1>Hi, Ik ben Jesse de Poot</h1>
+            <h2>Ik ben een <span class="auto-type"></span></h2>
+            <p>Ik studeer Informatica aan Avans Hogeschool en hou ervan om mensen te helpen en nieuwe dingen te creëren. Van websites tot innovatieve oplossingen, ik pak uitdagingen stap voor stap aan en zet ideeën om in resultaat.</p>
+            <br>
+            <div class="btn-box">
+                <a class="button" href="#projects">Projecten</a>
+                <a class="button" href="#contact">Laten we praten</a>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="./images/logoPrimary.png" alt="Jessedp's Logo">
+        </div>
+    </section>
+
+    <section class="aboutme" id="aboutme">
+        <h1>Over Mij</h1>
+            <p>Ik ben Jesse de Poot, 18 jaar en momenteel bezig met mijn Associate Degree Informatica aan de Avans Hogeschool. Wat mij drijft is mensen helpen en iets nieuws creëren – of dat nu in een project, een website of een innovatieve oplossing is. Ik ben van nature rustig, maar kan ook energiek en enthousiast worden als ik echt gepassioneerd ben over een onderwerp. Daarbij ben ik altijd leergierig en nieuwsgierig naar hoe dingen werken.<br>
+            <br>Een van mijn projecten waar ik trots op ben, is een website die een AAAD Lander aanstuurt. Dit project combineerde mijn interesse in technologie met mijn wens om praktische oplossingen te bouwen en mensen te helpen. Ik vind het leuk om complexe uitdagingen stap voor stap aan te pakken en ideeën om te zetten in concrete resultaten.</p>
+            <a href="./documenten/cv.pdf" target="_blank" class="button">Bekijk mijn CV</a>
+        </section>
+
+    <section class="projects" id="projects">
+        <h1 class="title">Projecten</h1>
+        <div class="content">
+            <div class="project">
+                <img src="./images/aaadLander/homepage.jpg" alt="">
+                <h1>AAAD Lander</h1>
+                <h2>HTML, CSS, Javascript</h2>
+                <div class="buttons">
+                    <a href="https://jessedepoot.github.io/AAADLander/" class="button">Website</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="./images/joyceWoodwork/homepage.png" alt="">
+                <h1>Joyce Woodwork</h1>
+                <h2>HTML, CSS, Javascript</h2>
+                <div class="buttons">
+                    <a href="https://jessedepoot.github.io/JoyceWoodwork/" class="button">Website</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="./images/tisjriCoaching/homepage.png" alt="">
+                <h1>Tisjri Coaching</h1>
+                <h2>Jouwweb</h2>
+                <div class="buttons">
+                    <a href="https://www.tisjri-coaching.nl/" target="_blank" class="button">Website</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="./images/sprocketFietsen/homepage.png" alt="homepage Sprocket Fietsen">
+                <h1>Sprocket Fietsen</h1>
+                <h2>Jouwweb</h2>
+                <div class="buttons">
+                    <a href="https://www.sprocketfietsen.nl/" target="_blank" class="button">Website</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h1>Contact</h1>
+        <div class="contact-container">
+    <form id="contactForm" action="https://formspree.io/f/xyznbwql" method="POST">
+  <div class="form-group">
+    <label for="name">Naam</label>
+    <input type="text" id="name" name="name" placeholder="Je naam" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" placeholder="Je e-mailadres" required>
+  </div>
+
+  <div class="form-group">
+    <label for="phonenumber">Telefoonnummer</label>
+    <input type="text" id="phonenumber" name="phonenumber" placeholder="Je telefoonnummer" required>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Bericht</label>
+    <textarea id="message" name="message" rows="5" placeholder="Je bericht..." required></textarea>
+  </div>
+
+  <button type="submit">Verzenden</button>
+  <p id="response"></p>
+</form>
+
+  </div>
+    </section>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

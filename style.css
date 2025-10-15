@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --color-primary: #ff821c; /*7380ec*/
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-info-dark: #000000;
+  --color-info-light: #dce1eb;
+  --color-dark: #000;
+  --color-light: #fff;
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+
+  --box-shadow: 0 2rem 3rem var(--color-light);
+  --box-shadow-project: 0 2rem 3rem #696969;
+}
+
+/* Dark theme overrides */
+    .dark-theme {
+      --color-background: #060606;
+      --color-dark: #ffffff;
+      --color-light: #000000;
+      --color-info-dark: #adb5bd;
+      --color-info-light: #495057;
+      --box-shadow: 0 2rem 3rem var(--color-light);
+    }
+
+* {
+  font-family: Poppins, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  transition: all 300ms ease;
+}
+
+::selection {
+      background: var(--color-primary); /* highlight background */
+      color: var(--color-black);         /* text color when selected */
+    }
+
+header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  justify-content: space-between;
+  box-shadow: var(--box-shadow);
+  align-items: center;
+  height: 5.5rem;
+  background: var(--color-light);
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  height: 65px;
+  margin-left: 15px;
+}
+
+header .logo a {
+  margin-left: 1rem;
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+header .navbar ul {
+  margin-right: 1vw;
+  display: flex;
+  list-style: none;
+}
+
+header .navbar a {
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--color-dark);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+header .navbar button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: var(--color-primary);
+      color: var(--color-light);
+    } 
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  min-height: 100vh;
+  background: var(--color-background);
+  align-items: center;
+}
+
+.home .content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  width: 50%;
+}
+
+
+.home .content h1 {
+  font-size: 3.5vw;
+  color: var(--color-dark);
+}
+
+.home .content h2 {
+  font-size: 2.5vw;
+  color: var(--color-dark);
+}
+
+.home .content span {
+  color: var(--color-primary);
+}
+
+.home .content span::selection {
+  color: var(--color-dark);
+  background: var(--color-primary);
+}
+
+.home .content p {
+  font-size: 1vw;
+  color: var(--color-dark);
+}
+
+.home .logo {
+  display: flex;
+  position: absolute;
+  width: 50%;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .logo img {
+  height: 80%;
+  width: 80%;
+}
+
+.home .btn-box {
+  display: flex;
+}
+
+/* Button-stijl voor <a> */
+a.button {
+  display: inline-block; /* belangrijk voor width/padding */
+  width: 40%;           /* kan ook max-width gebruiken als je niet 100% wilt */
+  padding: 0.75rem;
+  margin: 0.5rem;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  text-decoration: none;  /* verwijdert de onderstreping */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;     /* zorgt dat tekst gecentreerd blijft */
+  transition: background 0.3s ease; /* mooie hover animatie */
+}
+
+a.button:hover {
+  background-color: var(--color-primary);
+}
+
+
+.aboutme {
+  min-height: 100vh;
+  width: 100%;
+  background: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.aboutme h1 {
+  margin-top: 7.5rem;
+  font-size: 3rem;
+  color: var(--color-dark);
+}
+
+.aboutme p {
+  color: var(--color-dark);
+  font-size: clamp(1rem, 1.75vw, 2rem);
+  margin: 2rem;
+  line-height: 1.6; /* zorgt voor betere leesbaarheid */
+}
+
+.aboutme .content {
+  display: flex;
+}
+
+.projects {
+  min-height: 100vh;
+  width: 100%;
+  background: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects .title {
+  margin-top: 7.5rem;
+  font-size: 3rem;
+  color: var(--color-dark);
+}
+
+.projects p {
+  color: var(--color-dark);
+  font-size: 1.75rem;
+  margin: 2rem;
+}
+
+.projects .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      width: 80%;
+      justify-content: center;
+}
+
+.projects .content .project {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-light);
+  border: 2px var(--color-dark) solid;
+  border-radius: var(--border-radius-2);
+  box-shadow: var(--box-shadow-project) ;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  min-height: 10vh;
+}
+
+.projects .content .project:hover {
+    box-shadow: var(--box-shadow);
+}
+
+.projects .content .project img {
+  background: var(--color-dark);
+  width: auto;
+  height: 17rem;
+  border-radius: var(--border-radius-2);
+  box-shadow: var(--box-shadow);
+  border-bottom: 2px var(--color-dark) solid;
+}
+
+.projects .content .project h1 {
+  font-size: 2rem;
+  color: var(--color-dark);
+  font-weight: 600;
+}
+
+.projects .content .project h2 {
+  font-size: 1.5rem;
+  color: var(--color-dark);
+  font-weight: 400;
+}
+
+.projects .content .project p {
+  font-size: 1.2rem;
+  color: var(--color-dark);
+}
+
+.projects .content .project .button {
+  display: block;        /* maakt width respecteerbaar */
+  width: 80%;           /* vult de parent container */
+  text-align: center;    /* centreert de tekst */
+  padding: 0.75rem;
+  margin: 0.25rem 0;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.projects .content .project .button:hover {
+  background-color: var(--color-primary);
+}
+
+.projects .content .project .buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.packets {
+  min-height: 100vh;
+  width: 100%;
+  background: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.packets .title {
+  margin-top: 7.5rem;
+  font-size: 3rem;
+  color: var(--color-dark);
+}
+
+.packets p {
+  color: var(--color-dark);
+  font-size: 1.75rem;
+  margin: 2rem;
+}
+
+.packets i {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+}
+
+
+.packets .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+      gap: 20px;
+      padding: 20px;
+      width: 100%;
+      justify-content: center;
+}
+
+.packets .content .packet {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-light);
+  border: 2px var(--color-dark) solid;
+  border-radius: var(--border-radius-2);
+  box-shadow: var(--box-shadow);
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  min-height: 10vh;
+}
+
+.packets .content .packet ul {
+  list-style: none;
+  width: 90%;
+}
+
+.packets .content .packet ul li {
+  color: var(--color-dark);
+}
+
+.packets .content .packet img {
+  width: 100%;
+}
+
+.packets .content .packet h1 {
+  font-size: 3rem;
+  color: var(--color-dark);
+  font-weight: 600;
+}
+
+.packets .content .packet h2 {
+  font-size: 2rem;
+  color: var(--color-dark);
+  font-weight: 400;
+}
+
+.packets .content .packet p {
+  font-size: 1.2rem;
+  color: var(--color-dark);
+}
+
+.packets .content .packet .button {
+  display: block;        /* maakt width respecteerbaar */
+  width: 80%;           /* vult de parent container */
+  text-align: center;    /* centreert de tekst */
+  padding: 0.75rem;
+  margin: 0.25rem 0;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.packets .content .packet .button:hover {
+  background-color: var(--color-primary);
+}
+
+.packets .content .packet .buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.contact {
+ min-height: 100vh;
+  width: 100%;
+  background: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact h1 {
+  margin-top: 7.5rem;
+  font-size: 3rem;
+  color: var(--color-dark);
+}
+
+.contact p {
+  color: var(--color-dark);
+  font-size: 1.75rem;
+  margin: 2rem;
+}
+
+/*-----Contact Formulier-----*/
+
+.contact-container {
+  width: 90%;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--color-dark);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--color-dark);
+  background: var(--color-light);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+button:hover {
+  background: var(--color-primary) ;
+}
+
+#response {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1000px) {
+  header li a {
+    display: none;
+  }
+
+  .home {
+    text-align: center;
+  }
+
+  .home .btn-box {
+  justify-content: center;
+}
+
+  .home .logo {
+    display: none;
+  }
+
+  .home .content {
+    margin: 0 auto;
+    width: 90%;
+  }
+.home .content h1 {
+  font-size: clamp(2vw, 6vw, 6rem);
+}
+
+.home .content h2 {
+  font-size: clamp(1.3rem, 4vw, 3rem);
+}
+
+.home .content p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+}
